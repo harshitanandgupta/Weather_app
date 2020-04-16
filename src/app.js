@@ -5,7 +5,7 @@ const geocode=require('./geocode')
 const forecast=require('./forecast')
 
 const app=express();
-
+const port=process.env.PORT || 3000;
 
 app.set('view engine','hbs')
 const viewsdir=path.join(__dirname,'../templates/views')
@@ -59,6 +59,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("Server is Running")
+app.listen(port,()=>{
+    console.log("Server is Running on" +port)
 })
