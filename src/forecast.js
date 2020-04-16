@@ -9,7 +9,7 @@ const forecast=(lat,lon,callback) => {
         callback(message)
         else{
             const message=`The Current Weather is ${body.weather[0].description}.The current Temperature is ${body.main.temp}.The humidity is ${body.main.humidity}.`
-            callback(undefined,{'description' :body.weather[0].description,'temp': body.main.temp , 'humid':body.main.humidity})
+            callback(undefined,{'description' :body.weather[0].description,'temp': body.main.temp , 'humid':body.main.humidity,'temp_min':body.main.temp_min,'temp_max':body.main.temp_max})
         }
     })
 }

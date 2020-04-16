@@ -29,7 +29,7 @@ document.getElementById('submit').addEventListener('click',(e) => {
                 if(data.error)
                 disperror(data.error)
                 else
-                dispdata(`The Current Weather for ${data.location} is ${data.description}.The current Temperature is ${data.temp} degrees Celcius.The humidity is ${data.humid}.`)
+                dispdata(`The Current Weather for ${data.location} is ${data.description}.The current Temperature is ${data.temp} degrees Celcius.The humidity is ${data.humid}.The max Temperature for the day would be ${data.temp_max} degrees Celcius whereas temperature can be as low as ${data.temp_min}.`)
             })
         })
     }
